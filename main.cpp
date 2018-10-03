@@ -1,6 +1,5 @@
 #include <iostream>
-#include "h.h"
-#include "lib1\h2.h"
+
 
 int main()
 {
