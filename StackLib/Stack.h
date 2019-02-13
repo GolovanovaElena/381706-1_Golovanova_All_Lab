@@ -18,14 +18,14 @@ public:
 	TStack(TStack<T> &S); //конструктор копирования
 	T Get(); //возвращает элемент, расположенный на вершине стека
 	T Top();
-	virtual TStack();
+	virtual ~TStack();
 	void Put(T A); //положить элемент
 	bool IsFull(); //проверка на полноту
 	bool IsEmpty(); //проверка на пустоту
 	void PrintStack(); //вывод стека
 	int operator!=(const TStack<T>& stack) const; //проверка на неравенство
 	int operator==(const TStack<T>& stack) const; //проверка на равенство
-	TStack operator=(const TStack<T>& stack); //приравнивание
+	TStack& operator=(const TStack<T>& stack); //приравнивание
 };
 
 template <class T>
@@ -56,8 +56,8 @@ TStack <T>::TStack (int n)
 template <class T>
 TStack <T>::TStack(TStack<T> &S)
 {
-	size = s.size;
-	top = s.top;
+	size = S.size;
+	top = S.top;
 	if (size == 0)
 		mas = NULL;
 	else
@@ -89,7 +89,7 @@ template <class T>
 T TStack<T>::Get()
 {
 	if (IsEmpty())
-		throw TException("Stack is empty")
+		throw TException("Stack is empty");
 	top--;
 	return mas[top];
 }
@@ -104,7 +104,7 @@ T TStack<T>::Top()
 }
 
 template <class T>
-TStack <T>::TStack()
+T TStack <T>::~TStack()
 {
 	top = 0;
 	size = 0;
@@ -118,7 +118,7 @@ void TStack<T>::Put(T A)
 		throw TException("Stack is full");
 	else
 	{
-		mas[top] = a;
+		mas[top] = A;
 		top++;
 	}
 }
@@ -139,14 +139,14 @@ int TStack<T>::operator!=(const TStack<T>&S) const
 template <class T>
 int TStack<T>::operator==(const TStack<T>&S) const
 {
-	if (top != s.top)
+	if (top != S.top)
 		return 0;
 	if (size != size)
 		return 0;
 	for (int i = 0; i < top; i++)
 	{
-		if(mas[i] != S.mas[i])
-			return 0
+		if (mas[i] != S.mas[i])
+			return 0;
 	}
 	return 1;
 }
@@ -158,7 +158,7 @@ TStack<T>& TStack<T>::operator=(const TStack<T>&S)
 	{
 		delete[] mas;
 		top = S.top;
-		size = s.size;
+		size = S.size;
 		mas = new T[size];
 		for (int i = 0; i < size; i++)
 			mas[i] = S.mas[i];
