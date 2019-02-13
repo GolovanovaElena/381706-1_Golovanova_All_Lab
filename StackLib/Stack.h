@@ -140,9 +140,9 @@ int TStack<T>::operator!=(const TStack<T>&S) const
 template <class T>
 int TStack<T>::operator==(const TStack<T>&S) const
 {
-	if (top != S.top)
+	if (this->top != S.top)
 		return 0;
-	if (size != size)
+	if (this->size != S.size)
 		return 0;
 	for (int i = 0; i < top; i++)
 	{

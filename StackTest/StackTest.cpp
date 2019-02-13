@@ -23,6 +23,8 @@ TEST(Stack, can_use_full_check_true)
 {
 	TStack <int> S(3);
 	S.Put(4);
+	S.Put(4);
+	S.Put(4);
 	ASSERT_TRUE(S.IsFull());
 }
 
@@ -41,7 +43,9 @@ TEST(Stack, can_use_empty_check_true)
 
 TEST(Stack, throws_when_in_full_stack_put_elem)
 {
-	TStack <int> S(6);
+	TStack <int> S(3);
+	S.Put(8);
+	S.Put(8);
 	S.Put(8);
 	ASSERT_ANY_THROW(S.Put(9));
 }
