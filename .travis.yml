@@ -8,7 +8,6 @@ before_script:
 script:
   - cmake ../381706-1_Golovanova_All_Lab
   - make -j
- //- cd ./bin/
   - ./StackTest/StackTest
 notifications:
   email: false
