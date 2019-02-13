@@ -48,6 +48,7 @@ TStack <T>::TStack (int n)
 	{
 		size = n;
 		top = 0;
+		mas = new T[size];
 		for (int i = 0; i < size; i++)
 			mas[i] = 0;
 	}
