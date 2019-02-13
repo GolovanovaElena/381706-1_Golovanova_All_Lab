@@ -104,7 +104,7 @@ T TStack<T>::Top()
 }
 
 template <class T>
-T TStack <T>::~TStack()
+TStack <T>::~TStack()
 {
 	top = 0;
 	size = 0;
