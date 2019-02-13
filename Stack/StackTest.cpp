@@ -18,7 +18,7 @@ int main()
 
 		TStack <int> copyStack(n);
 		cout << "\nCopyStack:\n";
-		copystack.PrintStack();
+		copyStack.PrintStack();
 		 
 		if (copyStack == stack)
 			cout << "\nCopyStack=Stack";

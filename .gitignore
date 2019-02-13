@@ -191,3 +191,4 @@ PublishScripts/
 
 # Microsoft Azure Build Output
 csx/
+/a.diff
