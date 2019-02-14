@@ -33,7 +33,7 @@ public:
  Queue<T>::Queue(Queue<T> &q) : TStack<T>(q) //почему не &q
  {
 	 start = q.start;
-	 count = q.count;
+	 num = q.num;
  }
 
  template <class T>
