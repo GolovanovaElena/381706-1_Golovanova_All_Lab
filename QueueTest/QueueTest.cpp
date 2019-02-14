@@ -59,14 +59,14 @@ TEST(Queue, check_circular_put)
 {
 	Queue <int> Q(4);
 	for (int i = 0; i < 4; i++)
-		Q.Put(i); 
+		Q.Put(i);  //1 2 3 4
 
-	Q.Get(); 
-	Q.Get();
+	Q.Get(); //2 3 4
+	Q.Get();// 3 4
 
-	Q.Put(4); 
-	Q.Get(); 
-	ASSERT_EQ(4, Q.Get());
+	Q.Put(4); //3 4 4
+	Q.Get(); //4 
+	ASSERT_EQ(2, Q.Get());
 }
 
 
