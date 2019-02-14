@@ -65,8 +65,8 @@ TEST(Queue, check_circular_put)
 	Q.Get();// 3 4
 
 	Q.Put(4); //3 4 4
-	Q.Get(); //4 
-	ASSERT_EQ(2, Q.Get());
+	Q.Get(); //4 4
+	ASSERT_EQ(4, Q.Get());
 }
 
 
