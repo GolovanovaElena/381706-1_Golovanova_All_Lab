@@ -56,7 +56,7 @@ TEST(Stack, throws_when_from_empty_stack_get_elem)
 	ASSERT_ANY_THROW(S.Get());
 }
 
-TEST(Stack, Srav_true)
+TEST(Stack, Comparison_true)
 {
 	TStack <int> S(2), S2(2);
 	S.Put(2);
@@ -64,7 +64,7 @@ TEST(Stack, Srav_true)
 	ASSERT_TRUE(S == S2);
 }
 
-TEST(Stack, Srav_false)
+TEST(Stack, Comparison_false)
 {
 	TStack <int> S(1), S2(1);
 	S.Put(1);
@@ -72,13 +72,13 @@ TEST(Stack, Srav_false)
 	ASSERT_FALSE(S == S2);
 }
 
-TEST(Stack, Srav_false_when_dif_size)
+TEST(Stack, Comparison_false_when_dif_size)
 {
 	TStack <int> S(2), S2(3);
 	ASSERT_FALSE(S == S2);
 }
 
-TEST(Stack, Srav_false_when_dif_top)
+TEST(Stack, Comparison_false_when_dif_top)
 {
 	TStack <int> S(4), S2(4);
 	S.Put(1);
@@ -86,7 +86,7 @@ TEST(Stack, Srav_false_when_dif_top)
 	ASSERT_FALSE(S == S2);
 }
 
-TEST(Stack, NoSrav_false)
+TEST(Stack, NoComparison_false)
 {
 	TStack <int> S(1), S2(1);
 	S.Put(1);
@@ -94,7 +94,7 @@ TEST(Stack, NoSrav_false)
 	ASSERT_FALSE(S != S2);
 }
 
-TEST(Stack, NoSrav_true)
+TEST(Stack, NoComparison_true)
 {
 	TStack <int> S(1), S2(1);
 	S.Put(1);
@@ -102,13 +102,13 @@ TEST(Stack, NoSrav_true)
 	ASSERT_TRUE(S != S2);
 }
 
-TEST(Stack, NoSrav_true_when_dif_size)
+TEST(Stack, NoComparison_true_when_dif_size)
 {
 	TStack <int> S(1), S2(3);
 	ASSERT_TRUE(S != S2);
 }
 
-TEST(Stack, NoSrav_false_when_dif_top)
+TEST(Stack, NoComparison_false_when_dif_top)
 {
 	TStack <int> S(3), S2(3);
 	S.Put(1);
@@ -116,7 +116,7 @@ TEST(Stack, NoSrav_false_when_dif_top)
 	ASSERT_TRUE(S != S2);
 }
 
-TEST(Stack, Prisvaiv)
+TEST(Stack, Assignment)
 {
 	TStack <int> S(3), S2(1);
 	S.Put(1), S.Put(2), S.Put(3);
@@ -124,7 +124,7 @@ TEST(Stack, Prisvaiv)
 	ASSERT_TRUE(S2 == S);
 }
 
-TEST(Stack, Poryadok_vivoda)
+TEST(Stack, Correct_order)
 {
 	TStack <int> S(3);
 	S.Put(1), S.Put(2), S.Put(3);
