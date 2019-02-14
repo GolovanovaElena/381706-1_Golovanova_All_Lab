@@ -57,7 +57,7 @@ TEST(Queue, throw_put_when_is_full)
 
 TEST(Queue, check_circular_put)
 {
-	Queue <int> Q(3);
+	Queue <int> Q(4);
 	for (int i = 0; i < 4; i++)
 		Q.Put(i); 
 
