@@ -37,11 +37,8 @@ public:
  }
 
  template <class T>
- Queue<T>::~Queue() //почему не наследуем?
- {
-	 start = 0;
-	 num = 0;
- }
+ Queue<T>::~Queue() 
+ { }
   
  template<class T>
  inline T Queue<T>::Top() //встроенная функция
