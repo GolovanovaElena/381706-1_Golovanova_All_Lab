@@ -8,14 +8,14 @@ template <class T>
 class TList
 {
 protected:
-	TElem<T>* begin;            //указатель на элемент в начале списака
+	TElem<T>* begin;            //указатель на элемент в начале списка
 	int num;                    //кол-во элементов в списке 
 public:
 	TList();                    //конструктор по умолчанию
 	TList(TList<T> &F);         //конструктор копирования
 	virtual ~TList();           //деструктор
 	int GetSize();              //получить кол-во элементов в листе
-	void Put(int _n, T elem);   //установть элемент на позицию n в списке
+	void Put(int _n, T elem);   //установить элемент на позицию n в списке
 	T Get(int _n);              //получить элемент из списка
 	void PutBegin(T A);         //положить в начало 
 	void PutEnd(T A);           //положить в конец 

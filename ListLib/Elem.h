@@ -15,7 +15,7 @@ public:
 	T GetDannyye(); //получить значение из узла
 	TElem<T>* GetNext(); //получить указатель на следующий узел
 	void SetDannyye(T _dannyye);
-	void SetNext(TElem<T>* n); //установить указательна следующее звено списка
+	void SetNext(TElem<T>* n); //установить указатель на следующее звено списка
 };
 
 template <class T>
