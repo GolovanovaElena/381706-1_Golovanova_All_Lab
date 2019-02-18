@@ -21,15 +21,17 @@ endif()
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Exception)
 add_subdirectory(Exception)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/StackLib)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gtest)
+add_subdirectory(gtest)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/StackLib)
-add_subdirectory(gtest)
+
 add_subdirectory(Stack)
 add_subdirectory(StackLib)
 add_subdirectory(StackTest)
 
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/MultiStackLib)
 add_subdirectory(MultiStack)
 add_subdirectory(MultiStackLib)
 add_subdirectory(MultiStackTest)

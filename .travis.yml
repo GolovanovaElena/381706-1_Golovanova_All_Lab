@@ -9,5 +9,6 @@ script:
   - cmake ../381706-1_Golovanova_All_Lab
   - make -j
   - ./StackTest/StackTest
+  - ./MultiStackTest/MultiStackTest
 notifications:
   email: false
