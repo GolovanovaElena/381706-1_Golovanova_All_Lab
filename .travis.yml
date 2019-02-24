@@ -8,6 +8,6 @@ before_script:
 script:
   - cmake ../381706-1_Golovanova_All_Lab
   - make -j
-  - ./Vector/Vector
+  - ./ArrayListTest/ArrayListTest
 notifications:
   email: false
