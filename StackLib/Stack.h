@@ -9,23 +9,23 @@ template <class T>
 class TStack
 {
 protected:
-	int size; //размер стека
-	int top; //самый верхний элемент
-	T* mas; //элементы стека
+	int size; //Г°Г Г§Г¬ГҐГ° Г±ГІГҐГЄГ 
+	int top; //Г±Г Г¬Г»Г© ГўГҐГ°ГµГ­ГЁГ© ГЅГ«ГҐГ¬ГҐГ­ГІ
+	T* mas; //ГЅГ«ГҐГ¬ГҐГ­ГІГ» Г±ГІГҐГЄГ 
 public:
-	int Getsize(); //возвращает размер
-	TStack(int n); //конструктор инициализации
-	TStack(TStack &S); //конструктор копирования
-	T Get(); //возвращает элемент, расположенный на вершине стека
+	int Getsize(); //ГўГ®Г§ГўГ°Г Г№Г ГҐГІ Г°Г Г§Г¬ГҐГ°
+	TStack(int n=0); //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГЁ
+	TStack(TStack &S); //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЄГ®ГЇГЁГ°Г®ГўГ Г­ГЁГї
+	T Get(); //ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГЅГ«ГҐГ¬ГҐГ­ГІ, Г°Г Г±ГЇГ®Г«Г®Г¦ГҐГ­Г­Г»Г© Г­Г  ГўГҐГ°ГёГЁГ­ГҐ Г±ГІГҐГЄГ 
 	T Top();
 	virtual ~TStack();
-	void Put(T A); //положить элемент
-	bool IsFull(); //положить элемент
-	bool IsEmpty(); //проверка на пустоту
-	void PrintStack(); //вывод стека
-	int operator!=(const TStack<T>& stack) const; //проверка на неравенство
-	int operator==(const TStack<T>& stack) const; //проверка на равенство
-	TStack& operator=(const TStack<T>& stack); //приравнивание
+	void Put(T A); //ГЇГ®Г«Г®Г¦ГЁГІГј ГЅГ«ГҐГ¬ГҐГ­ГІ
+	bool IsFull(); //ГЇГ®Г«Г®Г¦ГЁГІГј ГЅГ«ГҐГ¬ГҐГ­ГІ
+	bool IsEmpty(); //ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГЇГіГ±ГІГ®ГІГі
+	void PrintStack(); //ГўГ»ГўГ®Г¤ Г±ГІГҐГЄГ 
+	int operator!=(const TStack<T>& stack) const; //ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г­ГҐГ°Г ГўГҐГ­Г±ГІГўГ®
+	int operator==(const TStack<T>& stack) const; //ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г°Г ГўГҐГ­Г±ГІГўГ®
+	TStack& operator=(const TStack<T>& stack); //ГЇГ°ГЁГ°Г ГўГ­ГЁГўГ Г­ГЁГҐ
 };
 
 template <class T>
@@ -35,7 +35,7 @@ int TStack<T>::Getsize()
 }
 
 template <class T>
-TStack<T>::TStack(int n)
+TStack<T>::TStack(int n=0)
 {
 	if (n < 0)
 		throw TException("Negative size");
