@@ -12,7 +12,7 @@ int  main()
 		TString s;
 		cin >> s;
 		cout << s << " ~ ";
-		Queue<char> B=NULL;
+		Queue<char> B;
 		B = ConvertToPol(s);
 		B.PrintQueue();
 		cout << " = " << Res(B) << endl;
