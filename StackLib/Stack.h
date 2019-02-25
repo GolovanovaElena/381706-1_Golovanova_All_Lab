@@ -14,7 +14,7 @@ protected:
 	T* mas; //ýëåìåíòû ñòåêà
 public:
 	int Getsize(); //âîçâðàùàåò ðàçìåð
-	TStack(int n=0); //êîíñòðóêòîð èíèöèàëèçàöèè
+	TStack(int n); //êîíñòðóêòîð èíèöèàëèçàöèè
 	TStack(TStack &S); //êîíñòðóêòîð êîïèðîâàíèÿ
 	T Get(); //âîçâðàùàåò ýëåìåíò, ðàñïîëîæåííûé íà âåðøèíå ñòåêà
 	T Top();
@@ -35,8 +35,9 @@ int TStack<T>::Getsize()
 }
 
 template <class T>
-TStack<T>::TStack(int n=0)
+TStack<T>::TStack(int n)
 {
+	n=0;
 	if (n < 0)
 		throw TException("Negative size");
 	else
