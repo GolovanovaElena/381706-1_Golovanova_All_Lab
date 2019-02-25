@@ -23,7 +23,7 @@ public:
 };
 
 template <class T>
-Queue<T>::Queue(int n=0) : TStack<T>(n)
+Queue<T>::Queue(int n) : TStack<T>(n)
 {
 	start = 0;
 	num = 0;
