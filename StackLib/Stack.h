@@ -35,7 +35,7 @@ int TStack<T>::Getsize()
 }
 
 template <class T>
-TStack<T>::TStack(int n=0)
+TStack<T>::TStack(int n)
 {
 	if (n < 0)
 		throw TException("Negative size");
