@@ -11,7 +11,7 @@ protected:
 	int start; //начало очереди
 	int num; //кол-возанятых ячеект
 public:
-	Queue(int n=0); //конструктор
+	Queue(int n); //конструктор
 	Queue(Queue <T> &q); //конструктор копирования
 	virtual ~Queue(); //деструктор
 	T Top();
@@ -23,8 +23,9 @@ public:
 };
 
 template <class T>
-Queue<T>::Queue(int n=0) : TStack<T>(n)
+Queue<T>::Queue(int n) : TStack<T>(n)
 {
+	n=0;
 	start = 0;
 	num = 0;
 }
